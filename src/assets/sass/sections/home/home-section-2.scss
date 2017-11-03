@@ -1,0 +1,219 @@
+@import "../../lib/_mixins";
+
+.home-section-2{
+    @include transform(translateY(-250px));
+    width: 100%;
+    @include bg-img(cover, no-repeat, top);
+    padding-top: 600px;
+    @include flex-init();
+    @include flex-direction(row);
+    @include justify-content(center);
+    padding-bottom: 250px;
+
+    .trace{
+        margin: auto;
+    }
+
+    .food-section-img{
+        position: absolute;
+        left: 50%;
+        @include transform(translateX(-50%));
+        width: 100px;
+
+        &.img-1{
+            top: 8%;
+            margin-left: 480px;
+            width: 400px;
+
+        }
+
+        &.img-2{
+            top: 18%;
+            margin-left: -400px;
+            width: 250px;
+        }
+
+        &.img-3{
+            top: 18%;
+            margin-left: -540px;
+            width: 250px;
+        }
+
+        &.img-4{
+            top: 19.6%;
+            margin-left: 340px;
+            width: 520px;
+        }
+
+        &.img-5{
+            top: 25.8%;
+            margin-left: 200px;
+            width: 300px;
+        }
+
+        &.img-6{
+            top: 32%;
+            margin-left: -200px;
+            width: 400px;
+        }
+
+        &.img-7{
+            top: 40.5%;
+            margin-left: 350px;
+            width: 480px;
+        }
+
+        &.img-8{
+            top: 44.5%;
+            margin-left: 265px;
+            width: 500px;
+        }
+
+        &.img-9{
+            top: 54%;
+            margin-left: -350px;
+            width: 300px;
+        }
+
+        &.img-10{
+            top: 62.8%;
+            margin-left: 400px;
+            width: 500px;
+        }
+
+        &.img-11{
+            top: 70.3%;
+            margin-left: -570px;
+            width: 500px;
+        }
+
+        &.img-12{
+            top: 79.2%;
+            margin-left: -575px;
+            width: 400px;
+            z-index: 1;
+        }
+
+        &.img-13{
+            top: 86%;
+            margin-left: -470px;
+            width: 350px;
+        }
+        &.img-14{
+            top: 88%;
+            margin-left: -260px;
+            width: 300px;
+        }
+
+        &.img-15{
+            top: 84%;
+            margin-left: 360px;
+            width: 450px;
+        }
+
+        
+        &.svg-font-1{
+            margin-left: 0;
+            top: 11%;
+            width: 400px;
+        }
+
+
+
+        &.svg-font-2{
+            margin-left: -240px;
+            top: 26%;
+            width: 400px;
+        }
+
+        &.svg-font-3{
+            margin-left: 150px;
+            top: 38%;
+            width: 400px;
+        }
+
+        &.svg-font-4{
+            margin-left: -250px;
+            top: 48%;
+            width: 400px;
+        }
+
+        &.svg-font-5{
+            margin-left: 260px;
+            top: 58.5%;
+            width: 400px;
+        }
+
+        &.svg-font-6{
+            margin-left: -155px;
+            top: 68%;
+            width: 400px;
+        }
+
+        &.svg-font-7{
+            margin-left: 265px;
+            top: 78.5%;
+            width: 400px;
+        }
+
+        &.svg-font-8{
+            margin-left: -50px;
+            top: 91.8%;
+            width: 400px;
+        }
+
+
+        &.category-description{
+            z-index: 2;
+            max-width: 300px;
+            color: #414972;
+        
+            &.text-1{
+                margin-left: -65px;
+                top: 13.4%;
+                width: 250px;
+            }
+
+            &.text-2{
+                margin-left: -245px;
+                top: 29%;
+                width: 250px;
+            }
+
+            &.text-3{
+                margin-left: 115px;
+                top: 40.3%;
+                width: 245px;
+            }
+
+            &.text-4{
+                margin-left: -290px;
+                top: 50.3%;
+                width: 250px;
+            }
+            &.text-5{
+                margin-left: 250px;
+                top: 61.3%;
+                width: 250px;
+            }
+
+            &.text-6{
+                margin-left: -230px;
+                top: 70.2%;
+                width: 250px;
+            }
+
+            &.text-7{
+                margin-left: 300px;
+                top: 81%;
+                width: 250px;
+            }
+
+            &.text-8{
+                margin-left: 28px;
+                top: 94%;
+                width: 250px;
+            }
+        }
+    }
+}

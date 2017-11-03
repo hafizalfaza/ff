@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="768px" height="68px" viewBox="0 0 768 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>path</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.-About-Us" transform="translate(-347.000000, -771.000000)">
+            <g id="path" transform="translate(352.000000, 776.000000)">
+                <path d="M0,0 C48.1591355,56.9569868 103.390572,60.5167985 165.69431,10.679435 C215.29535,43.3223481 273.57915,98.455665 368,10.679435" id="Path-15" stroke="#414972" stroke-width="10" stroke-linecap="round"></path>
+                <circle id="Oval-2" fill="#414972" cx="401" cy="25" r="6"></circle>
+                <circle id="Oval-2-Copy" fill="#414972" cx="431" cy="46" r="6"></circle>
+                <circle id="Oval-2-Copy-2" fill="#414972" cx="465" cy="50" r="6"></circle>
+                <path d="M497,52.2668674 C530.306956,59.374846 556.294561,44.6192235 574.962815,8 C583.960929,25.7070922 666.979566,88.8951937 758,17.987061" id="Path-4" stroke="#414972" stroke-width="10" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

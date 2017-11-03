@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="79px" viewBox="0 0 90 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>news</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Desktop" transform="translate(-52.000000, -1011.000000)" stroke="#414972" stroke-width="3">
+            <g id="news" transform="translate(54.000000, 1013.000000)">
+                <path d="M0,0.25 C2.5,3.58333333 3.5,10.75 3,21.75 C2.25,38.25 1.75,78.75 5,67.5 C8.25,56.25 16.9980469,1.99902344 22.7490234,1.99902344 C28.5,1.99902344 5.89165664,99.9652692 29.75,69.5 C46,48.75 39.5,41.5 35.75,41.5 C30.2413527,41.5 25.2480469,85 44.9990234,67.5" id="Path-111"></path>
+                <path d="M48.4990234,41.2490234 C43.6650391,59.0817057 43.0817057,68.5817057 46.7490234,69.7490234 C52.25,71.5 57.5,46.5 56.75,45 C56,43.5 53.2480469,71.9980469 59.2490234,71.7490234 C65.25,71.5 60.7519531,46.5 67.0009766,39.25" id="Path-112"></path>
+                <path d="M71.5,67.5 C79.6433326,50.5 82.0480067,42.0833333 78.7140224,42.25 C73.7130458,42.5 75.4878251,52.1403509 78.5350812,54.5 C81.5823373,56.8596491 90.5,67.5 83,72.75 C78.7002803,75.7598038 76.2480469,73.2480469 74.4990234,69.2490234" id="Path-113"></path>
+            </g>
+        </g>
+    </g>
+</svg>
