@@ -1,6 +1,6 @@
 @import "../../lib/_mixins";
 
-.home-section-1{
+.about-section-1{
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -11,4 +11,13 @@
         width: 100%;
         @include bg-img(cover, no-repeat, center);
     }
+
+    .header-title{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        color: #424975;
+    }
+
 }

@@ -1,9 +1,11 @@
 .home-section-1 {
   position: relative;
   overflow: hidden;
-  border: 1px black solid;
   width: 100%;
   height: 100vh; }
   .home-section-1 .parallax-img {
     height: 120%;
-    width: 100%; }
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
