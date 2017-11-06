@@ -1,8 +1,8 @@
 
 function tntSection2(){
-    var tntTipsCarousel = document.querySelector('.tnt-tips-carousel');
-    if(tntTipsCarousel){
-        var flktyTntTips = new Flickity( tntTipsCarousel, {
+    var tntCategoryCarousel = document.querySelector('.tnt-category-carousel');
+    if(tntCategoryCarousel){
+        var flktyTntCategory = new Flickity( tntCategoryCarousel, {
             // options
             cellAlign: 'left',
             contain: true,
@@ -12,23 +12,23 @@ function tntSection2(){
 
 
     
-          var tntTipsCarouselChildren = tntTipsCarousel.children[0].children[0].childNodes;
+          var tntCategoryCarouselChildren = tntCategoryCarousel.children[0].children[0].childNodes;
           
-          var flickityChildrenCount = tntTipsCarouselChildren.length;
+          var flickityChildrenCount = tntCategoryCarouselChildren.length;
           
-          tntTipsCarouselChildren.forEach((carouselChild, i) => {
+          tntCategoryCarouselChildren.forEach((carouselChild, i) => {
               carouselChild.classList.remove('is-selected');
           })
           
           var selectedProductIndex;
           
-          flktyTntTips.on( 'select', function() {
-            tntTipsCarouselChildren.forEach((carouselChild, i) => {
+          flktyTntCategory.on( 'select', function() {
+            tntCategoryCarouselChildren.forEach((carouselChild, i) => {
                   carouselChild.classList.remove('is-selected');
                   carouselChild.classList.remove('init-active');
               })
           
-              selectedProductIndex = flktyTntTips.selectedIndex
+              selectedProductIndex = flktyTntCategory.selectedIndex
           
               var selectedIndexes = [];
               var unselectedIndexes = [];
@@ -36,7 +36,7 @@ function tntSection2(){
               var selectedAdder = 0;
               var unselectedAdder = 0;
           
-              tntTipsCarouselChildren.forEach((carouselChild, i) => {
+              tntCategoryCarouselChildren.forEach((carouselChild, i) => {
                   if(i<4){
           
                       if(selectedProductIndex + i < flickityChildrenCount){
@@ -49,7 +49,7 @@ function tntSection2(){
           
               })
           
-              tntTipsCarouselChildren.forEach((el, i) => {
+              tntCategoryCarouselChildren.forEach((el, i) => {
                   if(selectedIndexes.indexOf(i) === -1) {
                       unselectedIndexes.push(i);
                   }
@@ -57,12 +57,12 @@ function tntSection2(){
           
           
               selectedIndexes.forEach((index, i) => {
-                tntTipsCarouselChildren[index].classList.remove(tntTipsCarouselChildren[index].classList[1])
-                tntTipsCarouselChildren[index].classList.add('item-active-'+(i+1))
+                tntCategoryCarouselChildren[index].classList.remove(tntCategoryCarouselChildren[index].classList[1])
+                tntCategoryCarouselChildren[index].classList.add('item-active-'+(i+1))
               })
           
               unselectedIndexes.forEach((index, i) => {
-                tntTipsCarouselChildren[index].classList.remove(tntTipsCarouselChildren[index].classList[1])
+                tntCategoryCarouselChildren[index].classList.remove(tntCategoryCarouselChildren[index].classList[1])
               })
           
           })

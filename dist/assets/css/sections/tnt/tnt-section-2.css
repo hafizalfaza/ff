@@ -1,33 +1,45 @@
 .tnt-section-2 {
   width: 100%;
-  background: white;
-  padding-bottom: 100px; }
-  .tnt-section-2 .tnt-tips-carousel {
+  padding-bottom: 100px;
+  position: relative;
+  margin-top: -250px;
+  z-index: 1;
+  padding-top: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top; }
+  .tnt-section-2 .opening-text {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 70px;
+    color: #424975; }
+  .tnt-section-2 .tnt-category-carousel {
     margin-right: 0;
     height: 250px;
     padding-left: 10%;
     padding-right: 0;
     width: 100%;
-    background: white; }
-    .tnt-section-2 .tnt-tips-carousel .previous {
+    margin-bottom: 100px; }
+    .tnt-section-2 .tnt-category-carousel .previous {
       display: none; }
-    .tnt-section-2 .tnt-tips-carousel .next {
+    .tnt-section-2 .tnt-category-carousel .next {
       margin-right: 25px; }
-    .tnt-section-2 .tnt-tips-carousel .carousel-item {
+    .tnt-section-2 .tnt-category-carousel .carousel-item {
       position: relative;
       width: 250px;
       height: 100%;
       opacity: 0.2; }
-      .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-brush {
+      .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-brush {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         width: 100%;
         height: 100%;
         position: absolute; }
-      .tnt-section-2 .tnt-tips-carousel .carousel-item.init-active {
+      .tnt-section-2 .tnt-category-carousel .carousel-item.init-active {
         opacity: 1; }
-      .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner {
+      .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner {
         position: relative;
         z-index: 1;
         top: 50%;
@@ -57,7 +69,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top; }
-        .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner .color-layer {
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner .color-layer {
           display: -webkit-box;
           display: -moz-box;
           display: -ms-flexbox;
@@ -70,7 +82,7 @@
           flex-direction: column;
           justify-content: center;
           -webkit-justify-content: center; }
-          .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner .color-layer span {
+          .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner .color-layer span {
             align-self: center;
             -webkit-align-self: center;
             display: block;
@@ -78,55 +90,95 @@
             max-width: 80%;
             font-size: 18px;
             line-height: 1.2; }
-        .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner span {
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner span {
           max-width: 60%; }
-        .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-1 {
-          background-image: url("../img/products/bg_category1.jpg"); }
-          .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-1 .color-layer {
-            width: 100%;
-            height: 100%; }
-        .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-2 {
-          background-image: url("../img/products/bg_category2.jpg"); }
-          .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-2 .color-layer {
-            width: 100%;
-            height: 100%; }
-        .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-3 {
-          background-image: url("../img/products/bg_category3.jpg"); }
-          .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-3 .color-layer {
-            width: 100%;
-            height: 100%; }
-        .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-4 {
-          background-image: url("../img/products/bg_category4.jpg"); }
-          .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-4 .color-layer {
-            width: 100%;
-            height: 100%; }
-        .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-tips-1 {
-          background-image: url("../img/tips_n_tricks/bg_category1.jpg"); }
-          .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-tips-1 .color-layer {
-            width: 100%;
-            height: 100%; }
-        .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-tips-2 {
-          background-image: url("../img/tips_n_tricks/bg_category2.jpg"); }
-          .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-tips-2 .color-layer {
-            width: 100%;
-            height: 100%; }
-        .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-tips-3 {
-          background-image: url("../img/tips_n_tricks/bg_category3.jpg"); }
-          .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-tips-3 .color-layer {
-            width: 100%;
-            height: 100%; }
-        .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-tips-4 {
-          background-image: url("../img/tips_n_tricks/bg_category4.jpg"); }
-          .tnt-section-2 .tnt-tips-carousel .carousel-item .carousel-item-inner.img-tips-4 .color-layer {
-            width: 100%;
-            height: 100%; }
-      .tnt-section-2 .tnt-tips-carousel .carousel-item.init-active {
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-1 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-2 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-3 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-4 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-tips-1 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-tips-2 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-tips-3 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-tips-4 .color-layer {
+          width: 100%;
+          height: 100%; }
+      .tnt-section-2 .tnt-category-carousel .carousel-item.init-active {
         opacity: 1; }
-      .tnt-section-2 .tnt-tips-carousel .carousel-item.item-active-1 {
+      .tnt-section-2 .tnt-category-carousel .carousel-item.item-active-1 {
         opacity: 1; }
-      .tnt-section-2 .tnt-tips-carousel .carousel-item.item-active-2 {
+      .tnt-section-2 .tnt-category-carousel .carousel-item.item-active-2 {
         opacity: 1; }
-      .tnt-section-2 .tnt-tips-carousel .carousel-item.item-active-3 {
+      .tnt-section-2 .tnt-category-carousel .carousel-item.item-active-3 {
         opacity: 1; }
-      .tnt-section-2 .tnt-tips-carousel .carousel-item.item-active-4 {
+      .tnt-section-2 .tnt-category-carousel .carousel-item.item-active-4 {
         opacity: 1; }
+  .tnt-section-2 .recipe-cards-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+    .tnt-section-2 .recipe-cards-container .recipe-card {
+      padding: 0 10px;
+      width: 33.333333333333%;
+      height: 580px;
+      margin-bottom: 100px; }
+      .tnt-section-2 .recipe-cards-container .recipe-card .inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        cursor: pointer; }
+        .tnt-section-2 .recipe-cards-container .recipe-card .inner:hover {
+          -webkit-transform: scale(1.025);
+          -moz-transform: scale(1.025);
+          -ms-transform: scale(1.025);
+          -o-transform: scale(1.025);
+          transform: scale(1.025);
+          -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+        .tnt-section-2 .recipe-cards-container .recipe-card .inner .white-brush {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 40%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          padding-left: 30px; }
+          .tnt-section-2 .recipe-cards-container .recipe-card .inner .white-brush h2 {
+            margin-top: 60px;
+            margin-bottom: 20px; }

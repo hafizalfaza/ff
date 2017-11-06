@@ -2,9 +2,13 @@
 
 .about-section-2{
     @include bg-img(cover, no-repeat, top);
-    @include transform(translateY(-250px));
+    position: relative;
+    margin-top: -250px;
+    z-index: 1;
     padding-top: 400px;
     padding-bottom: 100px;
+
+
     .bowls-container{
         margin-bottom: 100px;
         text-align: center;
@@ -21,7 +25,7 @@
             @include flex-direction(row);
             width: 100%;
             margin-bottom: 100px;
-            @include transform(translateX(-50px));
+            // @include transform(translateX(-50px));
 
 
             .text-container{
@@ -31,39 +35,89 @@
                 @include flex-direction(row);
                 @include justify-content(flex-end);
                 padding-right: 20px;
+                padding-bottom: 20px;
+                
 
-                border-bottom: 1px #424975 solid;
 
-                @include transform(translateX(-100px));
-
-                p{
-                    max-width: 400px;
-                    color: #424975;
+                &:after{
+                    content: '';
+                    width: 80%;
+                    height: 1px;
+                    display: block;
+                    background: #424975;
                     position: absolute;
                     bottom: 0;
-                    margin-bottom: 20px;
-                    @include transform(translateX(100px));
-                    line-height: 1.5;
+                    left: 0;
+                }
+
+                // @include transform(translateX(-100px));
+
+                .text-wrapper{
+                    @include flex-init();
+                    @include align-items(flex-end);
+                    p{
+                        max-width: 400px;
+                        color: #424975;
+                        // position: absolute;
+                        bottom: 0;
+                        margin-bottom: 20px;
+                        // @include transform(translateX(10%));
+                        line-height: 1.5;
+                    }
+                }
+                
+            }
+
+            .img-container{
+                position: relative;
+                width: 480px;
+                height: 350px;
+                @include bg-img(cover, no-repeat, center);
+                border-radius: 8px;
+                // @include transform(translateY(50px));
+
+                .brush-text{
+                    position: absolute;
+                    left: -250px;
+                    width: 500px;
+                    height: 200px;
+                    @include bg-img(contain, no-repeat, center);
+                    background-image: url('../img/aboutus/brush-1.png');
+                    color: white;
+                    line-height: 120px;
+                    text-align: center;
                 }
             }
 
 
             &:nth-child(even){
                 @include flex-direction(row-reverse);
-                @include transform(translateX(50px));
+                // @include transform(translateX(50px));
 
                 .text-container{
-                    width: 50%;
+                    width: 45%;
                     @include flex-init();
                     @include flex-direction(row);
                     @include justify-content(flex-start);
                     padding-left: 20px;
-                    @include transform(translateX(100px));
+                    // @include transform(translateX(100px));
+
+                    &:after{
+                        content: '';
+                        width: 80%;
+                        height: 1px;
+                        display: block;
+                        background: #424975;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        left: auto;
+                    }
     
                     p{
                         max-width: 400px;
                         color: #424975;
-                        @include transform(translateX(-100px));
+                        // @include transform(translateX(-100px));
                         line-height: 1.5;
                     }
                 }
@@ -74,7 +128,7 @@
                     height: 350px;
                     @include bg-img(cover, no-repeat, center);
                     border-radius: 8px;
-                    @include transform(translateY(50px));
+                    // @include transform(translateY(50px));
     
                     .brush-text{
                         position: absolute;
@@ -90,28 +144,74 @@
                 }
                 
             }
+  
+        }
+    }
 
-            
 
-            .img-container{
-                position: relative;
-                width: 480px;
-                height: 350px;
-                @include bg-img(cover, no-repeat, center);
-                border-radius: 8px;
-                @include transform(translateY(50px));
+    @media only screen and (max-width: 320px){
+        .bowls-container{
+            display: none;
+        }
 
-                .brush-text{
-                    position: absolute;
-                    left: -250px;
-                    width: 500px;
-                    height: 200px;
-                    @include bg-img(contain, no-repeat, center);
-                    background-image: url('../img/aboutus/brush-1.png');
-                    color: white;
-                    line-height: 120px;
-                    text-align: center;
+        .content-container{
+            .inner-container{
+                @include flex-direction(column-reverse);
+
+                .img-container{
+                    width: calc(100% - 40px);
+                    margin: auto;
+
+                    .brush-text{
+                        width: 250px;
+                        height: 120px;
+                        left: -40px;
+                        font-size: 50px;
+                        line-height: 75px;
+                        top: -40px;
+                    }
                 }
+
+                .text-container{
+                    width: 100%;
+
+                    p{
+                        padding: 0 20px;
+                        padding-top: 20px;
+                    }
+                }
+
+
+                &:nth-child(even){
+                    @include flex-direction(column-reverse);
+
+                    .img-container{
+                        width: calc(100% - 40px);
+                        margin: auto;
+    
+                        .brush-text{
+                            width: 250px;
+                            height: 120px;
+                            left: auto;
+                            right: -20px;
+                            font-size: 50px;
+                            line-height: 75px;
+                            top: -40px;
+                        }
+                    }
+
+                    .text-container{
+                        width: 100%;
+    
+                        p{
+                            padding: 0 20px;
+                            padding-top: 20px;
+                        }
+                    }
+    
+    
+                }
+
             }
         }
     }

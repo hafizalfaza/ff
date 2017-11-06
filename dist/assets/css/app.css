@@ -1019,6 +1019,9 @@ p {
 .font-ultra-giant {
   font-size: 150px; }
 
+.force-width {
+  max-width: 1200px; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1490,11 +1493,9 @@ template {
     background-position: center; }
 
 .home-section-2 {
-  -webkit-transform: translateY(-250px);
-  -moz-transform: translateY(-250px);
-  -ms-transform: translateY(-250px);
-  -o-transform: translateY(-250px);
-  transform: translateY(-250px);
+  position: relative;
+  margin-top: -250px;
+  z-index: 1;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1680,11 +1681,9 @@ template {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  -webkit-transform: translateY(-250px);
-  -moz-transform: translateY(-250px);
-  -ms-transform: translateY(-250px);
-  -o-transform: translateY(-250px);
-  transform: translateY(-250px);
+  position: relative;
+  margin-top: -250px;
+  z-index: 1;
   padding-top: 400px;
   padding-bottom: 100px; }
   .about-section-2 .bowls-container {
@@ -1704,12 +1703,7 @@ template {
     -ms-flex-direction: row;
     flex-direction: row;
     width: 100%;
-    margin-bottom: 100px;
-    -webkit-transform: translateX(-50px);
-    -moz-transform: translateX(-50px);
-    -ms-transform: translateX(-50px);
-    -o-transform: translateX(-50px);
-    transform: translateX(-50px); }
+    margin-bottom: 100px; }
     .about-section-2 .content-container .inner-container .text-container {
       position: relative;
       width: 50%;
@@ -1726,89 +1720,30 @@ template {
       justify-content: flex-end;
       -webkit-justify-content: flex-end;
       padding-right: 20px;
-      border-bottom: 1px #424975 solid;
-      -webkit-transform: translateX(-100px);
-      -moz-transform: translateX(-100px);
-      -ms-transform: translateX(-100px);
-      -o-transform: translateX(-100px);
-      transform: translateX(-100px); }
-      .about-section-2 .content-container .inner-container .text-container p {
-        max-width: 400px;
-        color: #424975;
+      padding-bottom: 20px; }
+      .about-section-2 .content-container .inner-container .text-container:after {
+        content: '';
+        width: 80%;
+        height: 1px;
+        display: block;
+        background: #424975;
         position: absolute;
         bottom: 0;
-        margin-bottom: 20px;
-        -webkit-transform: translateX(100px);
-        -moz-transform: translateX(100px);
-        -ms-transform: translateX(100px);
-        -o-transform: translateX(100px);
-        transform: translateX(100px);
-        line-height: 1.5; }
-    .about-section-2 .content-container .inner-container:nth-child(even) {
-      -webkit-box-flex-direction: row-reverse;
-      -moz-box-flex-direction: row-reverse;
-      -webkit-flex-direction: row-reverse;
-      -ms-flex-direction: row-reverse;
-      flex-direction: row-reverse;
-      -webkit-transform: translateX(50px);
-      -moz-transform: translateX(50px);
-      -ms-transform: translateX(50px);
-      -o-transform: translateX(50px);
-      transform: translateX(50px); }
-      .about-section-2 .content-container .inner-container:nth-child(even) .text-container {
-        width: 50%;
+        left: 0; }
+      .about-section-2 .content-container .inner-container .text-container .text-wrapper {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        -webkit-box-flex-direction: row;
-        -moz-box-flex-direction: row;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        justify-content: flex-start;
-        -webkit-justify-content: flex-start;
-        padding-left: 20px;
-        -webkit-transform: translateX(100px);
-        -moz-transform: translateX(100px);
-        -ms-transform: translateX(100px);
-        -o-transform: translateX(100px);
-        transform: translateX(100px); }
-        .about-section-2 .content-container .inner-container:nth-child(even) .text-container p {
+        align-items: flex-end;
+        -webkit-align-items: flex-end; }
+        .about-section-2 .content-container .inner-container .text-container .text-wrapper p {
           max-width: 400px;
           color: #424975;
-          -webkit-transform: translateX(-100px);
-          -moz-transform: translateX(-100px);
-          -ms-transform: translateX(-100px);
-          -o-transform: translateX(-100px);
-          transform: translateX(-100px);
+          bottom: 0;
+          margin-bottom: 20px;
           line-height: 1.5; }
-      .about-section-2 .content-container .inner-container:nth-child(even) .img-container {
-        position: relative;
-        width: 480px;
-        height: 350px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 8px;
-        -webkit-transform: translateY(50px);
-        -moz-transform: translateY(50px);
-        -ms-transform: translateY(50px);
-        -o-transform: translateY(50px);
-        transform: translateY(50px); }
-        .about-section-2 .content-container .inner-container:nth-child(even) .img-container .brush-text {
-          position: absolute;
-          left: 250px;
-          width: 500px;
-          height: 200px;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-image: url("../img/aboutus/brush-1.png");
-          color: white;
-          line-height: 120px;
-          text-align: center; }
     .about-section-2 .content-container .inner-container .img-container {
       position: relative;
       width: 480px;
@@ -1816,12 +1751,7 @@ template {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      border-radius: 8px;
-      -webkit-transform: translateY(50px);
-      -moz-transform: translateY(50px);
-      -ms-transform: translateY(50px);
-      -o-transform: translateY(50px);
-      transform: translateY(50px); }
+      border-radius: 8px; }
       .about-section-2 .content-container .inner-container .img-container .brush-text {
         position: absolute;
         left: -250px;
@@ -1834,3 +1764,2033 @@ template {
         color: white;
         line-height: 120px;
         text-align: center; }
+    .about-section-2 .content-container .inner-container:nth-child(even) {
+      -webkit-box-flex-direction: row-reverse;
+      -moz-box-flex-direction: row-reverse;
+      -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse; }
+      .about-section-2 .content-container .inner-container:nth-child(even) .text-container {
+        width: 45%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex-direction: row;
+        -moz-box-flex-direction: row;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        justify-content: flex-start;
+        -webkit-justify-content: flex-start;
+        padding-left: 20px; }
+        .about-section-2 .content-container .inner-container:nth-child(even) .text-container:after {
+          content: '';
+          width: 80%;
+          height: 1px;
+          display: block;
+          background: #424975;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: auto; }
+        .about-section-2 .content-container .inner-container:nth-child(even) .text-container p {
+          max-width: 400px;
+          color: #424975;
+          line-height: 1.5; }
+      .about-section-2 .content-container .inner-container:nth-child(even) .img-container {
+        position: relative;
+        width: 480px;
+        height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 8px; }
+        .about-section-2 .content-container .inner-container:nth-child(even) .img-container .brush-text {
+          position: absolute;
+          left: 250px;
+          width: 500px;
+          height: 200px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("../img/aboutus/brush-1.png");
+          color: white;
+          line-height: 120px;
+          text-align: center; }
+  @media only screen and (max-width: 320px) {
+    .about-section-2 .bowls-container {
+      display: none; }
+    .about-section-2 .content-container .inner-container {
+      -webkit-box-flex-direction: column-reverse;
+      -moz-box-flex-direction: column-reverse;
+      -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; }
+      .about-section-2 .content-container .inner-container .img-container {
+        width: calc(100% - 40px);
+        margin: auto; }
+        .about-section-2 .content-container .inner-container .img-container .brush-text {
+          width: 250px;
+          height: 120px;
+          left: -40px;
+          font-size: 50px;
+          line-height: 75px;
+          top: -40px; }
+      .about-section-2 .content-container .inner-container .text-container {
+        width: 100%; }
+        .about-section-2 .content-container .inner-container .text-container p {
+          padding: 0 20px;
+          padding-top: 20px; }
+      .about-section-2 .content-container .inner-container:nth-child(even) {
+        -webkit-box-flex-direction: column-reverse;
+        -moz-box-flex-direction: column-reverse;
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse; }
+        .about-section-2 .content-container .inner-container:nth-child(even) .img-container {
+          width: calc(100% - 40px);
+          margin: auto; }
+          .about-section-2 .content-container .inner-container:nth-child(even) .img-container .brush-text {
+            width: 250px;
+            height: 120px;
+            left: auto;
+            right: -20px;
+            font-size: 50px;
+            line-height: 75px;
+            top: -40px; }
+        .about-section-2 .content-container .inner-container:nth-child(even) .text-container {
+          width: 100%; }
+          .about-section-2 .content-container .inner-container:nth-child(even) .text-container p {
+            padding: 0 20px;
+            padding-top: 20px; } }
+
+.recipe-detail-section-1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; }
+  .recipe-detail-section-1 .parallax-img {
+    height: 120%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .recipe-detail-section-1 .header-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white; }
+
+.recipe-detail-section-2 {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  margin-top: -250px;
+  padding-top: 300px;
+  z-index: 1; }
+  .recipe-detail-section-2 .content-container {
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: column;
+    -moz-box-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center; }
+    .recipe-detail-section-2 .content-container h2 {
+      max-width: 600px;
+      margin-bottom: 50px; }
+    .recipe-detail-section-2 .content-container p {
+      max-width: 600px;
+      line-height: 1.5;
+      margin-bottom: 20px; }
+    .recipe-detail-section-2 .content-container .video-container {
+      width: 100%;
+      height: 600px;
+      padding: 0 120px 0 120px;
+      padding: 100px 120px 100px 120px; }
+      .recipe-detail-section-2 .content-container .video-container .video {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../img/recipe-detail/video-pic.jpg"); }
+    .recipe-detail-section-2 .content-container .text-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-flex-direction: row;
+      -moz-box-flex-direction: row;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      width: 100%;
+      padding: 0 100px 0 100px;
+      margin-bottom: 200px; }
+      .recipe-detail-section-2 .content-container .text-container .col {
+        background: white;
+        width: 50%;
+        margin: 0 10px 0 10px;
+        padding: 0 50px 0 50px; }
+        .recipe-detail-section-2 .content-container .text-container .col h2 {
+          margin-top: 20px; }
+        .recipe-detail-section-2 .content-container .text-container .col ul li {
+          line-height: 1.5; }
+          .recipe-detail-section-2 .content-container .text-container .col ul li:before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 1px;
+            background: black;
+            vertical-align: middle;
+            margin-right: 5px; }
+
+.recipe-detail-section-3 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 100px 0; }
+  .recipe-detail-section-3 .lists-container {
+    color: #ffffff; }
+    .recipe-detail-section-3 .lists-container h2 {
+      margin: 0 0 50px 140px; }
+    .recipe-detail-section-3 .lists-container ul {
+      counter-reset: section;
+      list-style: none;
+      padding: 0 170px 0 200px; }
+      .recipe-detail-section-3 .lists-container ul li {
+        position: relative;
+        clear: both;
+        padding-bottom: 0; }
+        .recipe-detail-section-3 .lists-container ul li:not(:last-child) {
+          border-bottom: 1px white solid; }
+        .recipe-detail-section-3 .lists-container ul li div {
+          line-height: 1.8;
+          display: inline-block; }
+        .recipe-detail-section-3 .lists-container ul li:before {
+          position: absolute;
+          top: 50%;
+          position: absolute;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+          counter-increment: section;
+          content: counter(section);
+          display: inline-block;
+          font-size: 60px;
+          margin-left: -60px;
+          line-height: 60px;
+          text-align: center; }
+        .recipe-detail-section-3 .lists-container ul li p {
+          margin: 20px 0; }
+    .recipe-detail-section-3 .lists-container .chief-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-flex-direction: row;
+      -moz-box-flex-direction: row;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      color: white;
+      padding: 30px 0px 50px 0px;
+      margin: 150px 50px 0 50px;
+      border-top: 1px white solid; }
+      .recipe-detail-section-3 .lists-container .chief-container .profile-container {
+        width: 50%; }
+        .recipe-detail-section-3 .lists-container .chief-container .profile-container .wrapper {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: row;
+          -moz-box-flex-direction: row;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          align-items: center;
+          -webkit-align-items: center; }
+          .recipe-detail-section-3 .lists-container .chief-container .profile-container .wrapper img {
+            width: 100px; }
+          .recipe-detail-section-3 .lists-container .chief-container .profile-container .wrapper .text-container {
+            padding: 0 10px 0 50px; }
+      .recipe-detail-section-3 .lists-container .chief-container .btn-container {
+        width: 50%;
+        height: 100px;
+        align-self: flex-end;
+        -webkit-align-self: flex-end;
+        cursor: pointer;
+        background-size: 400px 70px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../img/recipe-detail/viewprofile-button.png");
+        text-align: center;
+        line-height: 100px;
+        font-size: 20px; }
+  .recipe-detail-section-3 .recipe-cards-container {
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    padding: 0 100px 0 100px;
+    display: none; }
+    .recipe-detail-section-3 .recipe-cards-container.active {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; }
+    @media only screen and (max-width: 320px) {
+      .recipe-detail-section-3 .recipe-cards-container {
+        padding: 0; } }
+    .recipe-detail-section-3 .recipe-cards-container .recipe-card {
+      width: 33.3333333333%;
+      height: 580px;
+      margin-bottom: 100px; }
+      @media only screen and (max-width: 320px) {
+        .recipe-detail-section-3 .recipe-cards-container .recipe-card {
+          width: 50%;
+          height: 280px;
+          margin-bottom: 20px; } }
+      .recipe-detail-section-3 .recipe-cards-container .recipe-card .inner {
+        position: relative;
+        height: 100%;
+        width: 92%;
+        border-radius: 20px;
+        margin: auto;
+        overflow: hidden;
+        cursor: pointer;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease; }
+        @media only screen and (max-width: 320px) {
+          .recipe-detail-section-3 .recipe-cards-container .recipe-card .inner {
+            border-radius: 6px; } }
+        .recipe-detail-section-3 .recipe-cards-container .recipe-card .inner:hover {
+          -webkit-transform: scale(1.025);
+          -moz-transform: scale(1.025);
+          -ms-transform: scale(1.025);
+          -o-transform: scale(1.025);
+          transform: scale(1.025);
+          -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+        .recipe-detail-section-3 .recipe-cards-container .recipe-card .inner .recipe-bg {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top; }
+        .recipe-detail-section-3 .recipe-cards-container .recipe-card .inner .text-container {
+          width: 100%;
+          height: 40%;
+          position: absolute;
+          bottom: 0;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          z-index: 2;
+          padding-left: 30px;
+          padding-right: 30px; }
+          .recipe-detail-section-3 .recipe-cards-container .recipe-card .inner .text-container h2 {
+            margin-top: 80px; }
+            @media only screen and (max-width: 320px) {
+              .recipe-detail-section-3 .recipe-cards-container .recipe-card .inner .text-container h2 {
+                margin-top: 20px;
+                margin-bottom: 0;
+                font-size: 20px; } }
+          @media only screen and (max-width: 320px) {
+            .recipe-detail-section-3 .recipe-cards-container .recipe-card .inner .text-container p {
+              font-size: 11px;
+              margin-top: 0; } }
+  .recipe-detail-section-3 .suggested-recipe-cards-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    .recipe-detail-section-3 .suggested-recipe-cards-container .suggested-recipe-card {
+      padding: 0 10px;
+      width: 33.333333333333%;
+      height: 580px; }
+      .recipe-detail-section-3 .suggested-recipe-cards-container .suggested-recipe-card .inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1; }
+        .recipe-detail-section-3 .suggested-recipe-cards-container .suggested-recipe-card .inner .white-brush {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 40%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          padding-left: 30px; }
+          .recipe-detail-section-3 .suggested-recipe-cards-container .suggested-recipe-card .inner .white-brush h2 {
+            margin-top: 60px;
+            margin-bottom: 20px; }
+
+.recipes-section-1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; }
+  .recipes-section-1 .parallax-img {
+    height: 120%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .recipes-section-1 .header-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white; }
+
+.recipes-section-2 {
+  width: 100%;
+  padding-bottom: 100px;
+  position: relative;
+  margin-top: -250px;
+  z-index: 1;
+  padding-top: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top; }
+  .recipes-section-2 .opening-text {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 70px;
+    color: #424975; }
+  .recipes-section-2 .recipes-recipes-carousel {
+    margin-right: 0;
+    height: 250px;
+    padding-left: 10%;
+    padding-right: 0;
+    width: 100%;
+    margin-bottom: 100px; }
+    .recipes-section-2 .recipes-recipes-carousel .previous {
+      display: none; }
+    .recipes-section-2 .recipes-recipes-carousel .next {
+      margin-right: 25px; }
+    .recipes-section-2 .recipes-recipes-carousel .carousel-item {
+      position: relative;
+      width: 250px;
+      height: 100%;
+      opacity: 0.2; }
+      .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-brush {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: absolute; }
+      .recipes-section-2 .recipes-recipes-carousel .carousel-item.init-active {
+        opacity: 1; }
+      .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-item-inner {
+        position: relative;
+        z-index: 1;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 94%;
+        height: 60%;
+        color: white;
+        text-align: center;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex-direction: column;
+        -moz-box-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top; }
+        .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-item-inner .color-layer {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: column;
+          -moz-box-flex-direction: column;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          justify-content: center;
+          -webkit-justify-content: center; }
+          .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-item-inner .color-layer span {
+            align-self: center;
+            -webkit-align-self: center;
+            display: block;
+            text-align: center;
+            max-width: 80%;
+            font-size: 18px;
+            line-height: 1.2; }
+        .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-item-inner span {
+          max-width: 60%; }
+        .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-item-inner.img-1 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-item-inner.img-2 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-item-inner.img-3 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-item-inner.img-4 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-item-inner.img-tips-1 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-item-inner.img-tips-2 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-item-inner.img-tips-3 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .recipes-section-2 .recipes-recipes-carousel .carousel-item .carousel-item-inner.img-tips-4 .color-layer {
+          width: 100%;
+          height: 100%; }
+      .recipes-section-2 .recipes-recipes-carousel .carousel-item.init-active {
+        opacity: 1; }
+      .recipes-section-2 .recipes-recipes-carousel .carousel-item.item-active-1 {
+        opacity: 1; }
+      .recipes-section-2 .recipes-recipes-carousel .carousel-item.item-active-2 {
+        opacity: 1; }
+      .recipes-section-2 .recipes-recipes-carousel .carousel-item.item-active-3 {
+        opacity: 1; }
+      .recipes-section-2 .recipes-recipes-carousel .carousel-item.item-active-4 {
+        opacity: 1; }
+  .recipes-section-2 .recipe-cards-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+    .recipes-section-2 .recipe-cards-container .recipe-card {
+      padding: 0 10px;
+      width: 33.333333333333%;
+      height: 580px;
+      margin-bottom: 100px; }
+      .recipes-section-2 .recipe-cards-container .recipe-card .inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        cursor: pointer; }
+        .recipes-section-2 .recipe-cards-container .recipe-card .inner:hover {
+          -webkit-transform: scale(1.025);
+          -moz-transform: scale(1.025);
+          -ms-transform: scale(1.025);
+          -o-transform: scale(1.025);
+          transform: scale(1.025);
+          -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+        .recipes-section-2 .recipe-cards-container .recipe-card .inner .white-brush {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 40%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: row;
+          -moz-box-flex-direction: row;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          padding-top: 60px;
+          padding-left: 20px;
+          padding-right: 20px; }
+          .recipes-section-2 .recipe-cards-container .recipe-card .inner .white-brush .img-container img {
+            width: 40px; }
+          .recipes-section-2 .recipe-cards-container .recipe-card .inner .white-brush .text-container {
+            padding-left: 30px; }
+            .recipes-section-2 .recipe-cards-container .recipe-card .inner .white-brush .text-container h2 {
+              margin-bottom: 20px; }
+
+.snf-section-1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; }
+  .snf-section-1 .parallax-img {
+    height: 120%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .snf-section-1 .header-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white; }
+
+.snf-section-2 {
+  width: 100%;
+  padding-bottom: 100px;
+  position: relative;
+  margin-top: -250px;
+  z-index: 1;
+  padding-top: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top; }
+  .snf-section-2 .opening-text {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 70px;
+    color: #424975; }
+  .snf-section-2 .snf-category-carousel {
+    margin-right: 0;
+    height: 250px;
+    padding-left: 10%;
+    padding-right: 0;
+    width: 100%;
+    margin-bottom: 100px; }
+    .snf-section-2 .snf-category-carousel .previous {
+      display: none; }
+    .snf-section-2 .snf-category-carousel .next {
+      margin-right: 25px; }
+    .snf-section-2 .snf-category-carousel .carousel-item {
+      position: relative;
+      width: 250px;
+      height: 100%;
+      opacity: 0.2; }
+      .snf-section-2 .snf-category-carousel .carousel-item .carousel-brush {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: absolute; }
+      .snf-section-2 .snf-category-carousel .carousel-item.init-active {
+        opacity: 1; }
+      .snf-section-2 .snf-category-carousel .carousel-item .carousel-item-inner {
+        position: relative;
+        z-index: 1;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 94%;
+        height: 60%;
+        color: white;
+        text-align: center;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex-direction: column;
+        -moz-box-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top; }
+        .snf-section-2 .snf-category-carousel .carousel-item .carousel-item-inner .color-layer {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: column;
+          -moz-box-flex-direction: column;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          justify-content: center;
+          -webkit-justify-content: center; }
+          .snf-section-2 .snf-category-carousel .carousel-item .carousel-item-inner .color-layer span {
+            align-self: center;
+            -webkit-align-self: center;
+            display: block;
+            text-align: center;
+            max-width: 80%;
+            font-size: 18px;
+            line-height: 1.2; }
+        .snf-section-2 .snf-category-carousel .carousel-item .carousel-item-inner span {
+          max-width: 60%; }
+        .snf-section-2 .snf-category-carousel .carousel-item .carousel-item-inner.img-1 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .snf-section-2 .snf-category-carousel .carousel-item .carousel-item-inner.img-2 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .snf-section-2 .snf-category-carousel .carousel-item .carousel-item-inner.img-3 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .snf-section-2 .snf-category-carousel .carousel-item .carousel-item-inner.img-4 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .snf-section-2 .snf-category-carousel .carousel-item .carousel-item-inner.img-tips-1 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .snf-section-2 .snf-category-carousel .carousel-item .carousel-item-inner.img-tips-2 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .snf-section-2 .snf-category-carousel .carousel-item .carousel-item-inner.img-tips-3 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .snf-section-2 .snf-category-carousel .carousel-item .carousel-item-inner.img-tips-4 .color-layer {
+          width: 100%;
+          height: 100%; }
+      .snf-section-2 .snf-category-carousel .carousel-item.init-active {
+        opacity: 1; }
+      .snf-section-2 .snf-category-carousel .carousel-item.item-active-1 {
+        opacity: 1; }
+      .snf-section-2 .snf-category-carousel .carousel-item.item-active-2 {
+        opacity: 1; }
+      .snf-section-2 .snf-category-carousel .carousel-item.item-active-3 {
+        opacity: 1; }
+      .snf-section-2 .snf-category-carousel .carousel-item.item-active-4 {
+        opacity: 1; }
+  .snf-section-2 .recipe-cards-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+    .snf-section-2 .recipe-cards-container .recipe-card {
+      padding: 0 10px;
+      width: 33.333333333333%;
+      height: 580px;
+      margin-bottom: 100px; }
+      .snf-section-2 .recipe-cards-container .recipe-card .inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        cursor: pointer; }
+        .snf-section-2 .recipe-cards-container .recipe-card .inner:hover {
+          -webkit-transform: scale(1.025);
+          -moz-transform: scale(1.025);
+          -ms-transform: scale(1.025);
+          -o-transform: scale(1.025);
+          transform: scale(1.025);
+          -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+        .snf-section-2 .recipe-cards-container .recipe-card .inner .white-brush {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 40%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: row;
+          -moz-box-flex-direction: row;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          padding-top: 60px;
+          padding-left: 20px;
+          padding-right: 20px; }
+          .snf-section-2 .recipe-cards-container .recipe-card .inner .white-brush .img-container img {
+            width: 40px; }
+          .snf-section-2 .recipe-cards-container .recipe-card .inner .white-brush .text-container {
+            padding-left: 30px; }
+            .snf-section-2 .recipe-cards-container .recipe-card .inner .white-brush .text-container h2 {
+              margin-bottom: 20px; }
+
+.tnt-section-1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; }
+  .tnt-section-1 .parallax-img {
+    height: 120%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .tnt-section-1 .header-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white; }
+
+.tnt-section-2 {
+  width: 100%;
+  padding-bottom: 100px;
+  position: relative;
+  margin-top: -250px;
+  z-index: 1;
+  padding-top: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top; }
+  .tnt-section-2 .opening-text {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 70px;
+    color: #424975; }
+  .tnt-section-2 .tnt-category-carousel {
+    margin-right: 0;
+    height: 250px;
+    padding-left: 10%;
+    padding-right: 0;
+    width: 100%;
+    margin-bottom: 100px; }
+    .tnt-section-2 .tnt-category-carousel .previous {
+      display: none; }
+    .tnt-section-2 .tnt-category-carousel .next {
+      margin-right: 25px; }
+    .tnt-section-2 .tnt-category-carousel .carousel-item {
+      position: relative;
+      width: 250px;
+      height: 100%;
+      opacity: 0.2; }
+      .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-brush {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: absolute; }
+      .tnt-section-2 .tnt-category-carousel .carousel-item.init-active {
+        opacity: 1; }
+      .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner {
+        position: relative;
+        z-index: 1;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 94%;
+        height: 60%;
+        color: white;
+        text-align: center;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex-direction: column;
+        -moz-box-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner .color-layer {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: column;
+          -moz-box-flex-direction: column;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          justify-content: center;
+          -webkit-justify-content: center; }
+          .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner .color-layer span {
+            align-self: center;
+            -webkit-align-self: center;
+            display: block;
+            text-align: center;
+            max-width: 80%;
+            font-size: 18px;
+            line-height: 1.2; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner span {
+          max-width: 60%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-1 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-2 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-3 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-4 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-tips-1 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-tips-2 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-tips-3 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .tnt-section-2 .tnt-category-carousel .carousel-item .carousel-item-inner.img-tips-4 .color-layer {
+          width: 100%;
+          height: 100%; }
+      .tnt-section-2 .tnt-category-carousel .carousel-item.init-active {
+        opacity: 1; }
+      .tnt-section-2 .tnt-category-carousel .carousel-item.item-active-1 {
+        opacity: 1; }
+      .tnt-section-2 .tnt-category-carousel .carousel-item.item-active-2 {
+        opacity: 1; }
+      .tnt-section-2 .tnt-category-carousel .carousel-item.item-active-3 {
+        opacity: 1; }
+      .tnt-section-2 .tnt-category-carousel .carousel-item.item-active-4 {
+        opacity: 1; }
+  .tnt-section-2 .recipe-cards-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+    .tnt-section-2 .recipe-cards-container .recipe-card {
+      padding: 0 10px;
+      width: 33.333333333333%;
+      height: 580px;
+      margin-bottom: 100px; }
+      .tnt-section-2 .recipe-cards-container .recipe-card .inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        cursor: pointer; }
+        .tnt-section-2 .recipe-cards-container .recipe-card .inner:hover {
+          -webkit-transform: scale(1.025);
+          -moz-transform: scale(1.025);
+          -ms-transform: scale(1.025);
+          -o-transform: scale(1.025);
+          transform: scale(1.025);
+          -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+        .tnt-section-2 .recipe-cards-container .recipe-card .inner .white-brush {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 40%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          padding-left: 30px; }
+          .tnt-section-2 .recipe-cards-container .recipe-card .inner .white-brush h2 {
+            margin-top: 60px;
+            margin-bottom: 20px; }
+
+.rni-section-1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; }
+  .rni-section-1 .parallax-img {
+    height: 120%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .rni-section-1 .header-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white; }
+
+.rni-section-2 {
+  width: 100%;
+  padding-bottom: 100px;
+  position: relative;
+  margin-top: -250px;
+  z-index: 1;
+  padding-top: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top; }
+  .rni-section-2 .opening-text {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 70px;
+    color: #424975; }
+  .rni-section-2 .rni-category-carousel {
+    margin-right: 0;
+    height: 250px;
+    padding-left: 10%;
+    padding-right: 0;
+    width: 100%;
+    margin-bottom: 100px; }
+    .rni-section-2 .rni-category-carousel .previous {
+      display: none; }
+    .rni-section-2 .rni-category-carousel .next {
+      margin-right: 25px; }
+    .rni-section-2 .rni-category-carousel .carousel-item {
+      position: relative;
+      width: 250px;
+      height: 100%;
+      opacity: 0.2; }
+      .rni-section-2 .rni-category-carousel .carousel-item .carousel-brush {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: absolute; }
+      .rni-section-2 .rni-category-carousel .carousel-item.init-active {
+        opacity: 1; }
+      .rni-section-2 .rni-category-carousel .carousel-item .carousel-item-inner {
+        position: relative;
+        z-index: 1;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 94%;
+        height: 60%;
+        color: white;
+        text-align: center;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex-direction: column;
+        -moz-box-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top; }
+        .rni-section-2 .rni-category-carousel .carousel-item .carousel-item-inner .color-layer {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: column;
+          -moz-box-flex-direction: column;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          justify-content: center;
+          -webkit-justify-content: center; }
+          .rni-section-2 .rni-category-carousel .carousel-item .carousel-item-inner .color-layer span {
+            align-self: center;
+            -webkit-align-self: center;
+            display: block;
+            text-align: center;
+            max-width: 80%;
+            font-size: 18px;
+            line-height: 1.2; }
+        .rni-section-2 .rni-category-carousel .carousel-item .carousel-item-inner span {
+          max-width: 60%; }
+        .rni-section-2 .rni-category-carousel .carousel-item .carousel-item-inner.img-1 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .rni-section-2 .rni-category-carousel .carousel-item .carousel-item-inner.img-2 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .rni-section-2 .rni-category-carousel .carousel-item .carousel-item-inner.img-3 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .rni-section-2 .rni-category-carousel .carousel-item .carousel-item-inner.img-4 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .rni-section-2 .rni-category-carousel .carousel-item .carousel-item-inner.img-tips-1 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .rni-section-2 .rni-category-carousel .carousel-item .carousel-item-inner.img-tips-2 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .rni-section-2 .rni-category-carousel .carousel-item .carousel-item-inner.img-tips-3 .color-layer {
+          width: 100%;
+          height: 100%; }
+        .rni-section-2 .rni-category-carousel .carousel-item .carousel-item-inner.img-tips-4 .color-layer {
+          width: 100%;
+          height: 100%; }
+      .rni-section-2 .rni-category-carousel .carousel-item.init-active {
+        opacity: 1; }
+      .rni-section-2 .rni-category-carousel .carousel-item.item-active-1 {
+        opacity: 1; }
+      .rni-section-2 .rni-category-carousel .carousel-item.item-active-2 {
+        opacity: 1; }
+      .rni-section-2 .rni-category-carousel .carousel-item.item-active-3 {
+        opacity: 1; }
+      .rni-section-2 .rni-category-carousel .carousel-item.item-active-4 {
+        opacity: 1; }
+  .rni-section-2 .recipe-cards-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+    .rni-section-2 .recipe-cards-container .recipe-card {
+      padding: 0 10px;
+      width: 33.333333333333%;
+      height: 580px;
+      margin-bottom: 100px; }
+      .rni-section-2 .recipe-cards-container .recipe-card .inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        cursor: pointer; }
+        .rni-section-2 .recipe-cards-container .recipe-card .inner:hover {
+          -webkit-transform: scale(1.025);
+          -moz-transform: scale(1.025);
+          -ms-transform: scale(1.025);
+          -o-transform: scale(1.025);
+          transform: scale(1.025);
+          -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+        .rni-section-2 .recipe-cards-container .recipe-card .inner .white-brush {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 40%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          padding-left: 30px; }
+          .rni-section-2 .recipe-cards-container .recipe-card .inner .white-brush h2 {
+            margin-top: 60px;
+            margin-bottom: 20px; }
+
+.enc-section-1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; }
+  .enc-section-1 .parallax-img {
+    height: 120%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .enc-section-1 .header-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white; }
+
+.enc-section-2 {
+  position: relative;
+  width: 100%;
+  margin-top: -200px;
+  z-index: 2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 200px 0 100px 0;
+  background-image: url("../img/event-calendar/BG-event-n-calendar.png"); }
+  .enc-section-2 .calendar-container {
+    position: absolute;
+    width: 800px;
+    top: -150px;
+    left: 60%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    @media only screen and (max-width: 320px) {
+      .enc-section-2 .calendar-container {
+        padding: 0;
+        width: 280px;
+        right: 0; } }
+    .enc-section-2 .calendar-container .calendar-carousel {
+      width: 100%;
+      height: 400px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../img/event-calendar/event-bg-slide.png"); }
+      .enc-section-2 .calendar-container .calendar-carousel .flickity-prev-next-button {
+        margin-top: -35px; }
+      .enc-section-2 .calendar-container .calendar-carousel .calendar-item {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex-direction: row;
+        -moz-box-flex-direction: row;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row; }
+        .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date {
+          position: relative;
+          width: 40%;
+          height: 100%; }
+          .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper {
+            position: absolute;
+            top: 35%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 20px;
+            display: inline-block; }
+            @media only screen and (max-width: 320px) {
+              .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper h2 {
+                font-size: 15px; }
+              .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper h3 {
+                font-size: 15px; } }
+            .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper h2 {
+              margin: 0; }
+            .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper h3 {
+              margin: 0; }
+        .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc {
+          width: 60%;
+          height: 100%;
+          padding-left: 30px;
+          padding-top: 80px; }
+          @media only screen and (max-width: 320px) {
+            .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc h2 {
+              font-size: 15px; }
+            .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc p {
+              font-size: 15px; } }
+          .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc h2 {
+            margin: 0;
+            margin-top: 15px; }
+          .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc p {
+            max-width: 300px; }
+  .enc-section-2 .events-carousel {
+    margin-right: 0;
+    margin-bottom: 100px;
+    height: 640px;
+    padding-left: 10%;
+    padding-right: 0;
+    width: 100%; }
+    .enc-section-2 .events-carousel:before {
+      content: 'Events Nearby';
+      font-size: 100px;
+      font-family: 'Bronze Script Personal Use', sans-serif;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%; }
+    .enc-section-2 .events-carousel .previous {
+      display: none; }
+    .enc-section-2 .events-carousel .next {
+      margin-right: 25px;
+      margin-top: 100px; }
+    .enc-section-2 .events-carousel .carousel-item {
+      position: relative;
+      width: 350px;
+      height: 100%;
+      opacity: 0.2; }
+      .enc-section-2 .events-carousel .carousel-item .carousel-brush {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: absolute; }
+      .enc-section-2 .events-carousel .carousel-item.init-active {
+        opacity: 1; }
+      .enc-section-2 .events-carousel .carousel-item .carousel-item-inner {
+        position: relative;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        border-radius: 8px;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease; }
+        .enc-section-2 .events-carousel .carousel-item .carousel-item-inner:hover {
+          -webkit-transform: translate(-50%, -50%) scale(1.025);
+          -moz-transform: translate(-50%, -50%) scale(1.025);
+          -ms-transform: translate(-50%, -50%) scale(1.025);
+          -o-transform: translate(-50%, -50%) scale(1.025);
+          transform: translate(-50%, -50%) scale(1.025);
+          -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+        .enc-section-2 .events-carousel .carousel-item .carousel-item-inner .brush-block {
+          position: absolute;
+          bottom: 0;
+          height: 48%;
+          width: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          padding-left: 30px;
+          padding-bottom: 40px;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: column;
+          -moz-box-flex-direction: column;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          justify-content: flex-end;
+          -webkit-justify-content: flex-end; }
+          .enc-section-2 .events-carousel .carousel-item .carousel-item-inner .brush-block h2 {
+            margin: 0;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            max-width: 220px; }
+          .enc-section-2 .events-carousel .carousel-item .carousel-item-inner .brush-block p {
+            margin: 0;
+            max-width: 300px; }
+      .enc-section-2 .events-carousel .carousel-item.init-active {
+        opacity: 1; }
+      .enc-section-2 .events-carousel .carousel-item.item-active-1 {
+        opacity: 1; }
+      .enc-section-2 .events-carousel .carousel-item.item-active-2 {
+        opacity: 1; }
+      .enc-section-2 .events-carousel .carousel-item.item-active-3 {
+        opacity: 1; }
+  .enc-section-2 .events-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+    .enc-section-2 .events-container .event {
+      width: 33.333333333%;
+      height: 550px;
+      padding: 0 20px;
+      margin-bottom: 50px; }
+      .enc-section-2 .events-container .event .inner {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 8px;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        cursor: pointer; }
+        .enc-section-2 .events-container .event .inner:hover {
+          -webkit-transform: scale(1.025);
+          -moz-transform: scale(1.025);
+          -ms-transform: scale(1.025);
+          -o-transform: scale(1.025);
+          transform: scale(1.025);
+          -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+        .enc-section-2 .events-container .event .inner .brush-block {
+          position: absolute;
+          bottom: 0;
+          height: 48%;
+          width: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          padding-left: 30px;
+          padding-bottom: 40px;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: column;
+          -moz-box-flex-direction: column;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          justify-content: flex-end;
+          -webkit-justify-content: flex-end; }
+          .enc-section-2 .events-container .event .inner .brush-block h2 {
+            margin: 0;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            max-width: 220px; }
+          .enc-section-2 .events-container .event .inner .brush-block p {
+            margin: 0;
+            max-width: 280px; }
+
+.jtf-section-1 {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 100px; }
+  .jtf-section-1 h1 {
+    color: #494846;
+    font-weight: 200;
+    padding-left: 120px;
+    margin: 0;
+    margin-bottom: 80px; }
+  .jtf-section-1 .menu-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center; }
+    .jtf-section-1 .menu-wrapper .menu {
+      width: 50%;
+      padding-left: 120px;
+      padding-bottom: 50px;
+      margin-bottom: 100px; }
+      .jtf-section-1 .menu-wrapper .menu:nth-child(even) {
+        border-left: 1px #414972 solid; }
+      .jtf-section-1 .menu-wrapper .menu .brush-title {
+        z-index: 0;
+        position: relative;
+        color: white;
+        font-size: 65px;
+        font-weight: 200;
+        margin-top: 0; }
+        .jtf-section-1 .menu-wrapper .menu .brush-title:after {
+          z-index: -1;
+          position: absolute;
+          left: -15%;
+          /* @include transform(translateX(-50%)); */
+          top: -35%;
+          content: '';
+          background-image: url("../img/join-the-flow/bitmap.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          display: inline-block;
+          width: 400px;
+          height: 200px; }
+      .jtf-section-1 .menu-wrapper .menu p {
+        margin-bottom: 50px;
+        max-width: 350px;
+        margin-top: 50px;
+        color: #414972;
+        line-height: 1.5; }
+      .jtf-section-1 .menu-wrapper .menu .btn-sign-in {
+        border: 1px black solid;
+        padding: 10px 20px 10px 20px;
+        display: inline-block; }
+
+.news-section-1 {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 100px; }
+  .news-section-1 .content-container {
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    padding: 150px 150px 100px 150px; }
+    .news-section-1 .content-container .text-container {
+      width: 50%; }
+      .news-section-1 .content-container .text-container h1 {
+        font-size: 100px;
+        font-weight: 200;
+        margin: 0; }
+      .news-section-1 .content-container .text-container p {
+        max-width: 400px;
+        line-height: 1.5; }
+    .news-section-1 .content-container .form-container {
+      width: 50%;
+      padding-left: 100px;
+      padding-top: 120px; }
+      .news-section-1 .content-container .form-container div {
+        margin-bottom: 10px; }
+      .news-section-1 .content-container .form-container input {
+        width: 100%;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px black solid;
+        padding-bottom: 10px;
+        background: none; }
+        .news-section-1 .content-container .form-container input:focus {
+          outline: none; }
+      .news-section-1 .content-container .form-container textarea {
+        width: 100%;
+        height: 100px;
+        border: none;
+        overflow: auto;
+        outline: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        resize: none;
+        background: none;
+        border-bottom: 1px black solid; }
+        .news-section-1 .content-container .form-container textarea:focus {
+          outline: none; }
+      .news-section-1 .content-container .form-container button {
+        background: none;
+        padding: 5px 30px 5px 30px;
+        margin-top: 20px; }
+  .news-section-1 .big-news-container {
+    position: relative;
+    padding: 0 20px;
+    margin-bottom: 150px; }
+    .news-section-1 .big-news-container .img-container {
+      width: 800px;
+      height: 400px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../img/news/big-news.png");
+      border-radius: 5px; }
+    .news-section-1 .big-news-container .text-container {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      padding-right: 20%; }
+      .news-section-1 .big-news-container .text-container h2 {
+        font-weight: 200;
+        margin: 0;
+        margin-top: 20px; }
+      .news-section-1 .big-news-container .text-container p {
+        max-width: 300px;
+        margin: 0; }
+  .news-section-1 .news-cards-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+    .news-section-1 .news-cards-container .card {
+      width: 33.33333333%;
+      height: 500px;
+      padding: 0 10px;
+      margin-bottom: 50px; }
+      .news-section-1 .news-cards-container .card .inner {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        cursor: pointer; }
+        .news-section-1 .news-cards-container .card .inner:hover {
+          -webkit-box-shadow: 0px 10px 51px 11px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 0px 10px 51px 11px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 51px 11px rgba(0, 0, 0, 0.1);
+          -webkit-transform: scale(1.025);
+          -moz-transform: scale(1.025);
+          -ms-transform: scale(1.025);
+          -o-transform: scale(1.025);
+          transform: scale(1.025); }
+          .news-section-1 .news-cards-container .card .inner:hover .text-container {
+            background: white; }
+        .news-section-1 .news-cards-container .card .inner .img-container {
+          width: 100%;
+          height: 50%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center; }
+        .news-section-1 .news-cards-container .card .inner .text-container {
+          width: 100%;
+          height: 50%;
+          padding-left: 30px;
+          padding-top: 20px;
+          -webkit-transition: all 0.25s ease;
+          -moz-transition: all 0.25s ease;
+          -ms-transition: all 0.25s ease;
+          -o-transition: all 0.25s ease;
+          transition: all 0.25s ease; }
+          .news-section-1 .news-cards-container .card .inner .text-container h2 {
+            margin: 0;
+            margin-top: 10px; }
+
+.contact-section-1 {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .contact-section-1 .content-container {
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 150px 150px 100px 150px; }
+    @media only screen and (max-width: 320px) {
+      .contact-section-1 .content-container {
+        padding: 50px 20px;
+        -webkit-box-flex-direction: column;
+        -moz-box-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
+    .contact-section-1 .content-container .text-container {
+      width: 50%; }
+      @media only screen and (max-width: 320px) {
+        .contact-section-1 .content-container .text-container {
+          width: 100%; } }
+      .contact-section-1 .content-container .text-container h1 {
+        font-size: 100px;
+        font-weight: 200;
+        margin: 0;
+        color: #4C4845; }
+      .contact-section-1 .content-container .text-container p {
+        max-width: 400px;
+        line-height: 1.5;
+        color: #4C4845; }
+    .contact-section-1 .content-container .form-container {
+      width: 50%;
+      padding-left: 100px;
+      padding-top: 120px; }
+      @media only screen and (max-width: 320px) {
+        .contact-section-1 .content-container .form-container {
+          padding: 0;
+          width: 100%; } }
+      .contact-section-1 .content-container .form-container div {
+        margin-bottom: 10px; }
+      .contact-section-1 .content-container .form-container input {
+        width: 100%;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px black solid;
+        padding-bottom: 10px;
+        background: none; }
+        .contact-section-1 .content-container .form-container input:focus {
+          outline: none; }
+      .contact-section-1 .content-container .form-container textarea {
+        width: 100%;
+        height: 100px;
+        border: none;
+        overflow: auto;
+        outline: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        resize: none;
+        background: none;
+        border-bottom: 1px black solid; }
+        .contact-section-1 .content-container .form-container textarea:focus {
+          outline: none; }
+      .contact-section-1 .content-container .form-container button {
+        background: none;
+        border: 1px black solid;
+        padding: 5px 30px 5px 30px;
+        margin-top: 20px; }
+
+.far-section-1 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex-direction: row;
+  -moz-box-flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background: #F7F0E8; }
+  .far-section-1 .content-container {
+    width: 60%;
+    padding-top: 100px; }
+    @media only screen and (max-width: 320px) {
+      .far-section-1 .content-container {
+        width: 100%;
+        padding: 0;
+        padding-top: 50px; } }
+    .far-section-1 .content-container .text-container-title {
+      color: #4B4B4B;
+      padding: 0 10%;
+      margin-bottom: 50px; }
+      @media only screen and (max-width: 320px) {
+        .far-section-1 .content-container .text-container-title {
+          padding: 0 20px; } }
+      .far-section-1 .content-container .text-container-title h1 {
+        margin: 0;
+        font-weight: 200; }
+        @media only screen and (max-width: 320px) {
+          .far-section-1 .content-container .text-container-title h1 {
+            font-size: 60px; } }
+      .far-section-1 .content-container .text-container-title p {
+        max-width: 600px; }
+    .far-section-1 .content-container .filter-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-flex-direction: column;
+      -moz-box-flex-direction: column;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 0 10%; }
+      @media only screen and (max-width: 320px) {
+        .far-section-1 .content-container .filter-container {
+          padding: 0 20px; } }
+      .far-section-1 .content-container .filter-container .city {
+        width: 40%;
+        margin-bottom: 40px;
+        border-bottom: 1px black solid;
+        padding-bottom: 5px; }
+        @media only screen and (max-width: 320px) {
+          .far-section-1 .content-container .filter-container .city {
+            margin-bottom: 10px;
+            width: 100%;
+            border: none; } }
+      .far-section-1 .content-container .filter-container .wrapper {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex-direction: row;
+        -moz-box-flex-direction: row;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row; }
+        @media only screen and (max-width: 320px) {
+          .far-section-1 .content-container .filter-container .wrapper {
+            -webkit-box-flex-direction: column;
+            -moz-box-flex-direction: column;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column; } }
+        .far-section-1 .content-container .filter-container .wrapper .filter-item {
+          width: 40%;
+          border-bottom: 1px black solid;
+          padding-bottom: 5px; }
+          @media only screen and (max-width: 320px) {
+            .far-section-1 .content-container .filter-container .wrapper .filter-item {
+              width: 100%;
+              border: none; }
+              .far-section-1 .content-container .filter-container .wrapper .filter-item:first-child {
+                margin-bottom: 10px; } }
+          .far-section-1 .content-container .filter-container .wrapper .filter-item:first-child {
+            margin-right: 40px; }
+    .far-section-1 .content-container .cards-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-flex-direction: row;
+      -moz-box-flex-direction: row;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      justify-content: flex-end;
+      -webkit-justify-content: flex-end;
+      padding-right: 100px;
+      padding-top: 100px; }
+      @media only screen and (max-width: 320px) {
+        .far-section-1 .content-container .cards-container {
+          width: 100%;
+          padding: 0;
+          padding-top: 50px;
+          justify-content: center;
+          -webkit-justify-content: center; } }
+      .far-section-1 .content-container .cards-container .card {
+        width: 45%;
+        height: 520px;
+        margin-bottom: 50px; }
+        @media only screen and (max-width: 320px) {
+          .far-section-1 .content-container .cards-container .card {
+            height: 280px;
+            width: 50%; } }
+        .far-section-1 .content-container .cards-container .card .inner {
+          position: relative;
+          height: 100%;
+          width: 92%;
+          border-radius: 20px;
+          margin: auto;
+          overflow: hidden;
+          cursor: pointer;
+          -webkit-transition: all 0.25s ease;
+          -moz-transition: all 0.25s ease;
+          -ms-transition: all 0.25s ease;
+          -o-transition: all 0.25s ease;
+          transition: all 0.25s ease; }
+          .far-section-1 .content-container .cards-container .card .inner:hover {
+            -webkit-transform: scale(1.025);
+            -moz-transform: scale(1.025);
+            -ms-transform: scale(1.025);
+            -o-transform: scale(1.025);
+            transform: scale(1.025);
+            -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+          .far-section-1 .content-container .cards-container .card .inner .recipe-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top; }
+          .far-section-1 .content-container .cards-container .card .inner .text-container {
+            width: 100%;
+            height: 40%;
+            position: absolute;
+            bottom: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            z-index: 2;
+            padding-left: 30px;
+            padding-right: 30px; }
+            .far-section-1 .content-container .cards-container .card .inner .text-container h2 {
+              margin-top: 50px; }
+              @media only screen and (max-width: 320px) {
+                .far-section-1 .content-container .cards-container .card .inner .text-container h2 {
+                  font-size: 20px;
+                  margin-top: 20px;
+                  margin-bottom: 0; } }
+            @media only screen and (max-width: 320px) {
+              .far-section-1 .content-container .cards-container .card .inner .text-container p {
+                font-size: 12px;
+                margin: 0; } }
+  .far-section-1 .restaurant-map-container {
+    width: 40%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }

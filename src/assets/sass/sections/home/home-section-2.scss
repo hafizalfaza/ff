@@ -1,7 +1,9 @@
 @import "../../lib/_mixins";
 
 .home-section-2{
-    @include transform(translateY(-250px));
+    position: relative;
+    margin-top: -250px;
+    z-index: 1;
     width: 100%;
     @include bg-img(cover, no-repeat, top);
     padding-top: 600px;

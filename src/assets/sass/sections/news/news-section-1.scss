@@ -1,0 +1,168 @@
+@import "../../lib/_mixins";
+
+.news-section-1{
+    width: 100%;
+    @include bg-img(cover, no-repeat, bottom);
+    padding-bottom: 100px;
+
+    .content-container{
+        height: 100%;
+        @include flex-init();
+        @include flex-direction(row);
+        padding-top: 150px;
+        padding-bottom: 100px;
+        padding: 150px 150px 100px 150px;
+
+        .text-container{
+            width: 50%;
+
+            h1{
+                font-size: 100px;
+                font-weight: 200;
+                margin: 0;
+            }
+
+            p{
+                max-width: 400px;
+                line-height: 1.5;
+            }
+        }   
+
+        .form-container{
+            width: 50%;
+            padding-left: 100px;
+            padding-top: 120px;
+
+            div{
+                margin-bottom: 10px;
+            }
+
+            input{
+                width: 100%;
+                margin-bottom: 20px;
+                border: none;
+                border-bottom: 1px black solid;
+                padding-bottom: 10px;
+                background: none;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            textarea{
+                width: 100%;
+                height: 100px;
+
+                border: none;
+                overflow: auto;
+                outline: none;
+            
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+
+                resize: none;
+
+                background: none;
+
+                border-bottom: 1px black solid;
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            button{
+                background: none;
+                padding: 5px 30px 5px 30px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .big-news-container{
+        position: relative;
+        padding: 0 20px;
+        margin-bottom: 150px;
+
+        .img-container{
+            width: 800px;
+            height: 400px;
+            @include bg-img(cover, no-repeat, center);
+            background-image: url('../img/news/big-news.png');
+            border-radius: 5px;
+        }
+
+        .text-container{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            @include transform(translateY(-50%));
+            padding-right: 20%;
+
+            h2{
+                font-weight: 200;
+                margin: 0;
+                margin-top: 20px;
+            }
+
+            p{
+                max-width: 300px;
+                margin: 0;
+            }
+        }
+    }
+
+    .news-cards-container{
+        @include flex-init();
+        @include flex-direction(row);
+        @include flex-wrap();
+        .card{
+            width: 33.33333333%;
+            height: 500px;
+            padding: 0 10px;
+
+            margin-bottom: 50px;
+            
+            .inner{
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+                overflow: hidden;
+                @include trans(all .25s ease);
+                cursor: pointer;
+
+                &:hover{
+                    @include soft-box-shadow();
+                    @include transform(scale(1.025));
+                    .text-container{
+                        background: white;
+                    }
+                }
+
+                .img-container{
+                    width: 100%;
+                    height: 50%;
+                    @include bg-img(cover, no-repeat, center);
+                }
+
+                .text-container{
+                    width: 100%;
+                    height: 50%;
+                    padding-left: 30px;
+                    padding-top: 20px;
+                    @include trans(all .25s ease);
+
+                    h2{
+                        margin: 0;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }    
+    }
+}
+
+
+
+

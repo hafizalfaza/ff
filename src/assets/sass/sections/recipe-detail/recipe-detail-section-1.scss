@@ -1,0 +1,23 @@
+@import "../../lib/_mixins";
+
+.recipe-detail-section-1{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+
+    .parallax-img{
+        height: 120%;
+        width: 100%;
+        @include bg-img(cover, no-repeat, center);
+    }
+
+    .header-title{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        color: white;
+    }
+
+}

@@ -1,8 +1,8 @@
 
-function productsSection2(){
-    var productsProductsCarousel = document.querySelector('.products-products-carousel');
-    if(productsProductsCarousel){
-        var flktyProductsProducts = new Flickity( productsProductsCarousel, {
+function snfSection2(){
+    var snfCategoryCarousel = document.querySelector('.snf-category-carousel');
+    if(snfCategoryCarousel){
+        var flktySnfCategory = new Flickity( snfCategoryCarousel, {
             // options
             cellAlign: 'left',
             contain: true,
@@ -12,23 +12,23 @@ function productsSection2(){
 
 
     
-          var productsProductsCarouselChildren = productsProductsCarousel.children[0].children[0].childNodes;
+          var snfCategoryCarouselChildren = snfCategoryCarousel.children[0].children[0].childNodes;
           
-          var flickityChildrenCount = productsProductsCarouselChildren.length;
+          var flickityChildrenCount = snfCategoryCarouselChildren.length;
           
-          productsProductsCarouselChildren.forEach((carouselChild, i) => {
+          snfCategoryCarouselChildren.forEach((carouselChild, i) => {
               carouselChild.classList.remove('is-selected');
           })
           
           var selectedProductIndex;
           
-          flktyProductsProducts.on( 'select', function() {
-            productsProductsCarouselChildren.forEach((carouselChild, i) => {
+          flktySnfCategory.on( 'select', function() {
+            snfCategoryCarouselChildren.forEach((carouselChild, i) => {
                   carouselChild.classList.remove('is-selected');
                   carouselChild.classList.remove('init-active');
               })
           
-              selectedProductIndex = flktyProductsProducts.selectedIndex
+              selectedProductIndex = flktySnfCategory.selectedIndex
           
               var selectedIndexes = [];
               var unselectedIndexes = [];
@@ -36,7 +36,7 @@ function productsSection2(){
               var selectedAdder = 0;
               var unselectedAdder = 0;
           
-              productsProductsCarouselChildren.forEach((carouselChild, i) => {
+              snfCategoryCarouselChildren.forEach((carouselChild, i) => {
                   if(i<4){
           
                       if(selectedProductIndex + i < flickityChildrenCount){
@@ -49,7 +49,7 @@ function productsSection2(){
           
               })
           
-              productsProductsCarouselChildren.forEach((el, i) => {
+              snfCategoryCarouselChildren.forEach((el, i) => {
                   if(selectedIndexes.indexOf(i) === -1) {
                       unselectedIndexes.push(i);
                   }
@@ -57,12 +57,12 @@ function productsSection2(){
           
           
               selectedIndexes.forEach((index, i) => {
-                productsProductsCarouselChildren[index].classList.remove(productsProductsCarouselChildren[index].classList[1])
-                productsProductsCarouselChildren[index].classList.add('item-active-'+(i+1))
+                snfCategoryCarouselChildren[index].classList.remove(snfCategoryCarouselChildren[index].classList[1])
+                snfCategoryCarouselChildren[index].classList.add('item-active-'+(i+1))
               })
           
               unselectedIndexes.forEach((index, i) => {
-                productsProductsCarouselChildren[index].classList.remove(productsProductsCarouselChildren[index].classList[1])
+                snfCategoryCarouselChildren[index].classList.remove(snfCategoryCarouselChildren[index].classList[1])
               })
           
           })

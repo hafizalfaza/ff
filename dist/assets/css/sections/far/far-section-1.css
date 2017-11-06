@@ -1,0 +1,183 @@
+.far-section-1 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex-direction: row;
+  -moz-box-flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background: #F7F0E8; }
+  .far-section-1 .content-container {
+    width: 60%;
+    padding-top: 100px; }
+    @media only screen and (max-width: 320px) {
+      .far-section-1 .content-container {
+        width: 100%;
+        padding: 0;
+        padding-top: 50px; } }
+    .far-section-1 .content-container .text-container-title {
+      color: #4B4B4B;
+      padding: 0 10%;
+      margin-bottom: 50px; }
+      @media only screen and (max-width: 320px) {
+        .far-section-1 .content-container .text-container-title {
+          padding: 0 20px; } }
+      .far-section-1 .content-container .text-container-title h1 {
+        margin: 0;
+        font-weight: 200; }
+        @media only screen and (max-width: 320px) {
+          .far-section-1 .content-container .text-container-title h1 {
+            font-size: 60px; } }
+      .far-section-1 .content-container .text-container-title p {
+        max-width: 600px; }
+    .far-section-1 .content-container .filter-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-flex-direction: column;
+      -moz-box-flex-direction: column;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 0 10%; }
+      @media only screen and (max-width: 320px) {
+        .far-section-1 .content-container .filter-container {
+          padding: 0 20px; } }
+      .far-section-1 .content-container .filter-container .city {
+        width: 40%;
+        margin-bottom: 40px;
+        border-bottom: 1px black solid;
+        padding-bottom: 5px; }
+        @media only screen and (max-width: 320px) {
+          .far-section-1 .content-container .filter-container .city {
+            margin-bottom: 10px;
+            width: 100%;
+            border: none; } }
+      .far-section-1 .content-container .filter-container .wrapper {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex-direction: row;
+        -moz-box-flex-direction: row;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row; }
+        @media only screen and (max-width: 320px) {
+          .far-section-1 .content-container .filter-container .wrapper {
+            -webkit-box-flex-direction: column;
+            -moz-box-flex-direction: column;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column; } }
+        .far-section-1 .content-container .filter-container .wrapper .filter-item {
+          width: 40%;
+          border-bottom: 1px black solid;
+          padding-bottom: 5px; }
+          @media only screen and (max-width: 320px) {
+            .far-section-1 .content-container .filter-container .wrapper .filter-item {
+              width: 100%;
+              border: none; }
+              .far-section-1 .content-container .filter-container .wrapper .filter-item:first-child {
+                margin-bottom: 10px; } }
+          .far-section-1 .content-container .filter-container .wrapper .filter-item:first-child {
+            margin-right: 40px; }
+    .far-section-1 .content-container .cards-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-flex-direction: row;
+      -moz-box-flex-direction: row;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      justify-content: flex-end;
+      -webkit-justify-content: flex-end;
+      padding-right: 100px;
+      padding-top: 100px; }
+      @media only screen and (max-width: 320px) {
+        .far-section-1 .content-container .cards-container {
+          width: 100%;
+          padding: 0;
+          padding-top: 50px;
+          justify-content: center;
+          -webkit-justify-content: center; } }
+      .far-section-1 .content-container .cards-container .card {
+        width: 45%;
+        height: 520px;
+        margin-bottom: 50px; }
+        @media only screen and (max-width: 320px) {
+          .far-section-1 .content-container .cards-container .card {
+            height: 280px;
+            width: 50%; } }
+        .far-section-1 .content-container .cards-container .card .inner {
+          position: relative;
+          height: 100%;
+          width: 92%;
+          border-radius: 20px;
+          margin: auto;
+          overflow: hidden;
+          cursor: pointer;
+          -webkit-transition: all 0.25s ease;
+          -moz-transition: all 0.25s ease;
+          -ms-transition: all 0.25s ease;
+          -o-transition: all 0.25s ease;
+          transition: all 0.25s ease; }
+          .far-section-1 .content-container .cards-container .card .inner:hover {
+            -webkit-transform: scale(1.025);
+            -moz-transform: scale(1.025);
+            -ms-transform: scale(1.025);
+            -o-transform: scale(1.025);
+            transform: scale(1.025);
+            -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+          .far-section-1 .content-container .cards-container .card .inner .recipe-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top; }
+          .far-section-1 .content-container .cards-container .card .inner .text-container {
+            width: 100%;
+            height: 40%;
+            position: absolute;
+            bottom: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            z-index: 2;
+            padding-left: 30px;
+            padding-right: 30px; }
+            .far-section-1 .content-container .cards-container .card .inner .text-container h2 {
+              margin-top: 50px; }
+              @media only screen and (max-width: 320px) {
+                .far-section-1 .content-container .cards-container .card .inner .text-container h2 {
+                  font-size: 20px;
+                  margin-top: 20px;
+                  margin-bottom: 0; } }
+            @media only screen and (max-width: 320px) {
+              .far-section-1 .content-container .cards-container .card .inner .text-container p {
+                font-size: 12px;
+                margin: 0; } }
+  .far-section-1 .restaurant-map-container {
+    width: 40%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }

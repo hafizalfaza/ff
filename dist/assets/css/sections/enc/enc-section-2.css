@@ -1,0 +1,259 @@
+.enc-section-2 {
+  position: relative;
+  width: 100%;
+  margin-top: -200px;
+  z-index: 2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 200px 0 100px 0;
+  background-image: url("../img/event-calendar/BG-event-n-calendar.png"); }
+  .enc-section-2 .calendar-container {
+    position: absolute;
+    width: 800px;
+    top: -150px;
+    left: 60%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    @media only screen and (max-width: 320px) {
+      .enc-section-2 .calendar-container {
+        padding: 0;
+        width: 280px;
+        right: 0; } }
+    .enc-section-2 .calendar-container .calendar-carousel {
+      width: 100%;
+      height: 400px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../img/event-calendar/event-bg-slide.png"); }
+      .enc-section-2 .calendar-container .calendar-carousel .flickity-prev-next-button {
+        margin-top: -35px; }
+      .enc-section-2 .calendar-container .calendar-carousel .calendar-item {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex-direction: row;
+        -moz-box-flex-direction: row;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row; }
+        .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date {
+          position: relative;
+          width: 40%;
+          height: 100%; }
+          .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper {
+            position: absolute;
+            top: 35%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 20px;
+            display: inline-block; }
+            @media only screen and (max-width: 320px) {
+              .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper h2 {
+                font-size: 15px; }
+              .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper h3 {
+                font-size: 15px; } }
+            .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper h2 {
+              margin: 0; }
+            .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper h3 {
+              margin: 0; }
+        .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc {
+          width: 60%;
+          height: 100%;
+          padding-left: 30px;
+          padding-top: 80px; }
+          @media only screen and (max-width: 320px) {
+            .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc h2 {
+              font-size: 15px; }
+            .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc p {
+              font-size: 15px; } }
+          .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc h2 {
+            margin: 0;
+            margin-top: 15px; }
+          .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc p {
+            max-width: 300px; }
+  .enc-section-2 .events-carousel {
+    margin-right: 0;
+    margin-bottom: 100px;
+    height: 640px;
+    padding-left: 10%;
+    padding-right: 0;
+    width: 100%; }
+    .enc-section-2 .events-carousel:before {
+      content: 'Events Nearby';
+      font-size: 100px;
+      font-family: 'Bronze Script Personal Use', sans-serif;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%; }
+    .enc-section-2 .events-carousel .previous {
+      display: none; }
+    .enc-section-2 .events-carousel .next {
+      margin-right: 25px;
+      margin-top: 100px; }
+    .enc-section-2 .events-carousel .carousel-item {
+      position: relative;
+      width: 350px;
+      height: 100%;
+      opacity: 0.2; }
+      .enc-section-2 .events-carousel .carousel-item .carousel-brush {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: absolute; }
+      .enc-section-2 .events-carousel .carousel-item.init-active {
+        opacity: 1; }
+      .enc-section-2 .events-carousel .carousel-item .carousel-item-inner {
+        position: relative;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        border-radius: 8px;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease; }
+        .enc-section-2 .events-carousel .carousel-item .carousel-item-inner:hover {
+          -webkit-transform: translate(-50%, -50%) scale(1.025);
+          -moz-transform: translate(-50%, -50%) scale(1.025);
+          -ms-transform: translate(-50%, -50%) scale(1.025);
+          -o-transform: translate(-50%, -50%) scale(1.025);
+          transform: translate(-50%, -50%) scale(1.025);
+          -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+        .enc-section-2 .events-carousel .carousel-item .carousel-item-inner .brush-block {
+          position: absolute;
+          bottom: 0;
+          height: 48%;
+          width: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          padding-left: 30px;
+          padding-bottom: 40px;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: column;
+          -moz-box-flex-direction: column;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          justify-content: flex-end;
+          -webkit-justify-content: flex-end; }
+          .enc-section-2 .events-carousel .carousel-item .carousel-item-inner .brush-block h2 {
+            margin: 0;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            max-width: 220px; }
+          .enc-section-2 .events-carousel .carousel-item .carousel-item-inner .brush-block p {
+            margin: 0;
+            max-width: 300px; }
+      .enc-section-2 .events-carousel .carousel-item.init-active {
+        opacity: 1; }
+      .enc-section-2 .events-carousel .carousel-item.item-active-1 {
+        opacity: 1; }
+      .enc-section-2 .events-carousel .carousel-item.item-active-2 {
+        opacity: 1; }
+      .enc-section-2 .events-carousel .carousel-item.item-active-3 {
+        opacity: 1; }
+  .enc-section-2 .events-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-direction: row;
+    -moz-box-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+    .enc-section-2 .events-container .event {
+      width: 33.333333333%;
+      height: 550px;
+      padding: 0 20px;
+      margin-bottom: 50px; }
+      .enc-section-2 .events-container .event .inner {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 8px;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        cursor: pointer; }
+        .enc-section-2 .events-container .event .inner:hover {
+          -webkit-transform: scale(1.025);
+          -moz-transform: scale(1.025);
+          -ms-transform: scale(1.025);
+          -o-transform: scale(1.025);
+          transform: scale(1.025);
+          -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+        .enc-section-2 .events-container .event .inner .brush-block {
+          position: absolute;
+          bottom: 0;
+          height: 48%;
+          width: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          padding-left: 30px;
+          padding-bottom: 40px;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: column;
+          -moz-box-flex-direction: column;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          justify-content: flex-end;
+          -webkit-justify-content: flex-end; }
+          .enc-section-2 .events-container .event .inner .brush-block h2 {
+            margin: 0;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            max-width: 220px; }
+          .enc-section-2 .events-container .event .inner .brush-block p {
+            margin: 0;
+            max-width: 280px; }
