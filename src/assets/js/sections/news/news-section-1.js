@@ -1,0 +1,7 @@
+
+function newsSection1(){
+
+    
+}
+
+

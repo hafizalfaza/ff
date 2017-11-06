@@ -67,6 +67,7 @@ gulp.task('scripts', function() {
     './node_modules/gsap/TweenMax.js',
     './node_modules/fullPage.js/dist/jquery.fullpage.min.js',
     './src/assets/js/plugins/flickity.js',
+    './node_modules/mobile-detect/mobile-detect.js',
     src.jsFile
   ])
       .pipe(concat('scripts.js'))

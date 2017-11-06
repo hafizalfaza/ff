@@ -64,3 +64,28 @@
         border: 1px black solid;
         padding: 10px 20px 10px 20px;
         display: inline-block; }
+  @media only screen and (max-width: 320px) {
+    .jtf-section-1 .content-container {
+      padding: 0; }
+      .jtf-section-1 .content-container h1 {
+        padding-left: 30px; }
+      .jtf-section-1 .content-container .menu-wrapper {
+        padding: 0;
+        -webkit-box-flex-direction: column;
+        -moz-box-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .jtf-section-1 .content-container .menu-wrapper .menu {
+          width: 100%;
+          padding-left: 30px;
+          padding-right: 20px;
+          margin-bottom: 20px; }
+          .jtf-section-1 .content-container .menu-wrapper .menu:nth-child(even) {
+            border-left: none; }
+          .jtf-section-1 .content-container .menu-wrapper .menu h2 {
+            font-size: 50px; }
+            .jtf-section-1 .content-container .menu-wrapper .menu h2:after {
+              width: 300px;
+              left: -20px;
+              top: -40px; } }

@@ -18,11 +18,6 @@
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%); }
-    @media only screen and (max-width: 320px) {
-      .enc-section-2 .calendar-container {
-        padding: 0;
-        width: 280px;
-        right: 0; } }
     .enc-section-2 .calendar-container .calendar-carousel {
       width: 100%;
       height: 400px;
@@ -59,11 +54,6 @@
             transform: translateY(-50%);
             right: 20px;
             display: inline-block; }
-            @media only screen and (max-width: 320px) {
-              .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper h2 {
-                font-size: 15px; }
-              .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper h3 {
-                font-size: 15px; } }
             .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper h2 {
               margin: 0; }
             .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date .wrapper h3 {
@@ -73,16 +63,38 @@
           height: 100%;
           padding-left: 30px;
           padding-top: 80px; }
-          @media only screen and (max-width: 320px) {
-            .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc h2 {
-              font-size: 15px; }
-            .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc p {
-              font-size: 15px; } }
           .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc h2 {
             margin: 0;
             margin-top: 15px; }
           .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc p {
             max-width: 300px; }
+  .enc-section-2 .enc-see-all {
+    display: none;
+    margin-bottom: 50px; }
+    .enc-section-2 .enc-see-all.active {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-flex-direction: row;
+      -moz-box-flex-direction: row;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      justify-content: flex-end;
+      -webkit-justify-content: flex-end; }
+    .enc-section-2 .enc-see-all span {
+      border-bottom: 1px #424975 solid;
+      color: #424975;
+      width: 150px;
+      font-size: 20px;
+      padding-bottom: 10px; }
+  .enc-section-2 .all-events-title {
+    font-weight: 200;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 0; }
   .enc-section-2 .events-carousel {
     margin-right: 0;
     margin-bottom: 100px;
@@ -185,19 +197,21 @@
       .enc-section-2 .events-carousel .carousel-item.item-active-3 {
         opacity: 1; }
   .enc-section-2 .events-container {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-flex-direction: row;
-    -moz-box-flex-direction: row;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap; }
+    display: none; }
+    .enc-section-2 .events-container.active {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-flex-direction: row;
+      -moz-box-flex-direction: row;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap; }
     .enc-section-2 .events-container .event {
       width: 33.333333333%;
       height: 550px;
@@ -257,3 +271,128 @@
           .enc-section-2 .events-container .event .inner .brush-block p {
             margin: 0;
             max-width: 280px; }
+  .enc-section-2 .enc-event-cards-carousel-mobile {
+    display: none; }
+    .enc-section-2 .enc-event-cards-carousel-mobile .flickity-prev-next-button {
+      display: none; }
+    .enc-section-2 .enc-event-cards-carousel-mobile .carousel-item {
+      width: 90%;
+      height: 500px;
+      padding: 0 20px;
+      margin-bottom: 50px; }
+      .enc-section-2 .enc-event-cards-carousel-mobile .carousel-item .inner {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 8px;
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        cursor: pointer; }
+        .enc-section-2 .enc-event-cards-carousel-mobile .carousel-item .inner:hover {
+          -webkit-transform: scale(1.025);
+          -moz-transform: scale(1.025);
+          -ms-transform: scale(1.025);
+          -o-transform: scale(1.025);
+          transform: scale(1.025);
+          -webkit-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          -moz-box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 15px 18px 53px 0px rgba(0, 0, 0, 0.1); }
+        .enc-section-2 .enc-event-cards-carousel-mobile .carousel-item .inner .brush-block {
+          position: absolute;
+          bottom: 0;
+          height: 48%;
+          width: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: top;
+          padding-left: 30px;
+          padding-bottom: 40px;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: column;
+          -moz-box-flex-direction: column;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          justify-content: flex-end;
+          -webkit-justify-content: flex-end; }
+          .enc-section-2 .enc-event-cards-carousel-mobile .carousel-item .inner .brush-block span {
+            font-size: 12px; }
+          .enc-section-2 .enc-event-cards-carousel-mobile .carousel-item .inner .brush-block h2 {
+            margin: 0;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            max-width: 220px;
+            font-size: 30px; }
+          .enc-section-2 .enc-event-cards-carousel-mobile .carousel-item .inner .brush-block p {
+            margin: 0;
+            max-width: 280px;
+            font-size: 12px; }
+  @media only screen and (max-width: 320px) {
+    .enc-section-2 .calendar-container {
+      top: 0;
+      width: 100%;
+      left: 0;
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      transform: translateX(0); }
+      .enc-section-2 .calendar-container .calendar-carousel {
+        height: 200px; }
+        .enc-section-2 .calendar-container .calendar-carousel .calendar-item span {
+          font-size: 11px;
+          margin-bottom: 0; }
+        .enc-section-2 .calendar-container .calendar-carousel .calendar-item .date h2 {
+          font-size: 25px; }
+        .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc {
+          padding-left: 0;
+          padding-top: 28px; }
+          .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc h2 {
+            margin-top: 5px;
+            font-size: 15px;
+            margin-bottom: 5px; }
+          .enc-section-2 .calendar-container .calendar-carousel .calendar-item .desc p {
+            font-size: 11px; }
+    .enc-section-2 .events-carousel {
+      height: 500px; }
+      .enc-section-2 .events-carousel .flickity-prev-next-button {
+        display: none; }
+      .enc-section-2 .events-carousel .carousel-item {
+        width: 90%; }
+        .enc-section-2 .events-carousel .carousel-item .carousel-item-inner .brush-block span {
+          font-size: 12px; }
+        .enc-section-2 .events-carousel .carousel-item .carousel-item-inner .brush-block h2 {
+          font-size: 30px; }
+        .enc-section-2 .events-carousel .carousel-item .carousel-item-inner .brush-block p {
+          font-size: 12px; }
+    .enc-section-2 .all-events-title {
+      margin-top: 0px; }
+    .enc-section-2 .events-container {
+      padding: 0; }
+      .enc-section-2 .events-container .event {
+        width: 50%;
+        height: 300px;
+        padding: 0 10px; }
+        .enc-section-2 .events-container .event .brush-block {
+          padding-left: 10px !important;
+          padding-bottom: 10px !important; }
+          .enc-section-2 .events-container .event .brush-block span {
+            font-size: 11px;
+            margin-bottom: 10px; }
+          .enc-section-2 .events-container .event .brush-block h2 {
+            font-size: 18px;
+            margin-top: 0 !important;
+            margin-bottom: 10px !important; }
+          .enc-section-2 .events-container .event .brush-block p {
+            font-size: 11px; } }

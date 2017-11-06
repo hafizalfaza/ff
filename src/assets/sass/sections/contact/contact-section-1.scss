@@ -20,6 +20,7 @@
 
             @media only screen and (max-width: 320px){
                 width: 100%;
+                margin-bottom: 50px;
             }
 
             h1{
@@ -48,13 +49,14 @@
 
             div{
                 margin-bottom: 10px;
+                color: #989896;
             }
 
             input{
                 width: 100%;
                 margin-bottom: 20px;
                 border: none;
-                border-bottom: 1px black solid;
+                border-bottom: 1px #989896 solid;
                 padding-bottom: 10px;
                 background: none;
 
@@ -79,7 +81,7 @@
 
                 background: none;
 
-                border-bottom: 1px black solid;
+                border-bottom: 1px #989896 solid;
                 &:focus{
                     outline: none;
                 }
@@ -87,9 +89,10 @@
 
             button{
                 background: none;
-                border: 1px black solid;
+                border: 1px #989896 solid;
                 padding: 5px 30px 5px 30px;
                 margin-top: 20px;
+                color: #989896;
             }
         }
     }
